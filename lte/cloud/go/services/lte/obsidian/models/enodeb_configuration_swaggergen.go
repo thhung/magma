@@ -152,7 +152,7 @@ var enodebConfigurationTypeDeviceClassPropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["Baicells Nova-233 G2 OD FDD","Baicells Nova-243 OD TDD","Baicells Neutrino 224 ID FDD","Baicells ID TDD/FDD","NuRAN Cavium OC-LTE"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["Baicells Nova-233 G2 OD FDD","Baicells Nova-243 OD TDD","Baicells Neutrino 224 ID FDD","Baicells Neutrino 430 ID TDD","Baicells ID TDD/FDD","NuRAN Cavium OC-LTE"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -170,6 +170,8 @@ const (
 
 	// EnodebConfigurationDeviceClassBaicellsNeutrino224IDFDD captures enum value "Baicells Neutrino 224 ID FDD"
 	EnodebConfigurationDeviceClassBaicellsNeutrino224IDFDD string = "Baicells Neutrino 224 ID FDD"
+
+	EnodebConfigurationDeviceClassBaicellsNeutrino430IDTDD string = "Baicells Neutrino 430 ID TDD"
 
 	// EnodebConfigurationDeviceClassBaicellsIDTDDFDD captures enum value "Baicells ID TDD/FDD"
 	EnodebConfigurationDeviceClassBaicellsIDTDDFDD string = "Baicells ID TDD/FDD"
