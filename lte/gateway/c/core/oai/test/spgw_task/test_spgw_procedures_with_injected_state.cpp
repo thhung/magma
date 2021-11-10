@@ -109,12 +109,6 @@ TEST_F(SPGWAppInjectedStateProcedureTest, TestIPAllocFailure) {
       &sample_session_req_p, test_imsi_str, DEFAULT_BEARER_INDEX,
       sample_default_bearer_context, test_plmn);
 
-  // // trigger create session req to SPGW
-  // status_code_e create_session_rc = sgw_handle_s11_create_session_request(
-  //     spgw_state, &sample_session_req_p, test_imsi64);
-
-  // ASSERT_EQ(create_session_rc, RETURNok);
-
   // Verify that a UE context exists in SPGW state after CSR is received
   spgw_ue_context_t* ue_context_p = spgw_get_ue_context(test_imsi64);
   ASSERT_TRUE(ue_context_p != nullptr);
